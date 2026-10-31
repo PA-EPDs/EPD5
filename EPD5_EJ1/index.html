@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Semáforo de tráfico</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <main>
+            <section class="semaforo" aria-label="Semáforo">
+                <div class="luz luzRoja" data-luz="roja"></div>
+                <div class="luz luzAmarilla" data-luz="amarilla"></div>
+                <div class="luz luzVerde" data-luz="verde"></div>
+            </section>
+
+            <section class="panelControl" aria-label="Panel de control">
+                <button type="button" class="botonLuz botonLuzRoja" data-luz="roja">Rojo</button>
+                <button type="button" class="botonLuz botonLuzAmarilla" data-luz="amarilla">Amarillo</button>
+                <button type="button" class="botonLuz botonLuzVerde" data-luz="verde">Verde</button>
+                <p id="mensajeEstado"></p>
+            </section>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
