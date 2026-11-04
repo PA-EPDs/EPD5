@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>EPD05 - LazyLoad con jQuery</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        img {
+            display: block;
+            width: 800px;
+            max-width: 90%;
+            height: 500px;
+            margin: 30px auto;
+            border: 2px solid #333;
+        }
+    </style>
+
+    <!-- Librería jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Plugin LazyLoad -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("img.lazy").lazyload();
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Carga de imágenes con jQuery LazyLoad</h1>
+
+    <p>Las imágenes se cargan cuando el usuario
+       se desplaza hasta ellas.</p>
+
+    <img class="lazy" data-original="imagenes/foto1.jpg"
+         alt="Imagen 1">
+
+    <img class="lazy" data-original="imagenes/foto2.jpg"
+         alt="Imagen 2">
+
+    <img class="lazy" data-original="imagenes/foto3.jpg"
+         alt="Imagen 3">
+
+    <img class="lazy" data-original="imagenes/foto4.jpg"
+         alt="Imagen 4">
+
+    <img class="lazy" data-original="imagenes/foto5.jpg"
+         alt="Imagen 5">
+
+</body>
+</html>
