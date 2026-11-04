@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 1rem;
+    background: #f2f3f9;
+    color: #25243c;
+    font: 1rem/1.5 system-ui, sans-serif;
+}
+
+main {
+    max-width: 36rem;
+    margin: auto;
+}
+
+section {
+    padding: clamp(1rem, 5vw, 2rem);
+    background: white;
+    border: 1px solid #dad9e8;
+    border-radius: 1rem;
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+input, select, button {
+    font: inherit;
+}
+
+input:not([type="checkbox"]), select {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #77758c;
+    border-radius: 0.35rem;
+}
+
+button {
+    padding: 0.55rem 1rem;
+    border: 0;
+    border-radius: 0.35rem;
+    background: #43338b;
+    color: white;
+    cursor: pointer;
+}
+
+#panel-resumen, .error {
+    display: none;
+}
+
+.error {
+    color: #9b1d32;
+    margin-top: 0.25rem;
+}
+
+[aria-invalid="true"] {
+    outline: 1px solid #9b1d32;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 0 0.75rem;
+    overflow-wrap: anywhere;
+}

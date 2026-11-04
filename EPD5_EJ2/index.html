@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reserva de entradas | Festival de música</title>
+    <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <h1>Festival de música</h1>
+        <section id="formulario-reserva" aria-labelledby="titulo-formulario">
+            <h2>Reserva de entradas</h2>
+            <form novalidate>
+                <div class="campo">
+                    <label for="nombre">Nombre y apellidos</label>
+                    <input id="nombre" name="nombre" type="text" autocomplete="name" aria-describedby="error-nombre" required>
+                    <div id="error-nombre" class="error" aria-live="polite"></div>
+                </div>
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" aria-describedby="error-email" required>
+                    <div id="error-email" class="error" aria-live="polite"></div>
+                </div>
+                <div class="campo">
+                    <label for="entradas">Número de entradas</label>
+                    <input id="entradas" name="entradas" type="number" min="1" max="5" step="1" aria-describedby="error-entradas" required>
+                    <div id="error-entradas" class="error" aria-live="polite"></div>
+                </div>
+                <div class="campo">
+                    <label for="fecha">Fecha de asistencia</label>
+                    <input id="fecha" name="fecha" type="text" placeholder="dd/mm/aaaa" autocomplete="off" aria-describedby="error-fecha" required>
+                    <div id="error-fecha" class="error" aria-live="polite"></div>
+                </div>
+                <div class="campo">
+                    <label for="tipo">Tipo de entrada</label>
+                    <select id="tipo" name="tipo" aria-describedby="error-tipo" required>
+                        <option value="">Selecciona un tipo de entrada</option>
+                        <option value="general">General</option>
+                        <option value="premium">Premium</option>
+                        <option value="estudiante">Estudiante</option>
+                    </select>
+                    <div id="error-tipo" class="error" aria-live="polite"></div>
+                </div>
+                <div class="campo">
+                    <label><input id="condiciones" name="condiciones" type="checkbox" aria-describedby="error-condiciones" required> Acepto las condiciones de la reserva</label>
+                    <div id="error-condiciones" class="error" aria-live="polite"></div>
+                </div>
+                <button type="submit">Confirmar reserva</button>
+            </form>
+        </section>
+        <section id="panel-resumen" aria-labelledby="titulo-resumen">
+            <h2 id="titulo-resumen" tabindex="-1">Resumen de la reserva</h2>
+            <dl>
+                <dt>Titular</dt><dd id="resumen-nombre"></dd>
+                <dt>Email</dt><dd id="resumen-email"></dd>
+                <dt>Fecha</dt><dd id="resumen-fecha"></dd>
+                <dt>Tipo de entrada</dt><dd id="resumen-tipo"></dd>
+                <dt>Número de entradas</dt><dd id="resumen-entradas"></dd>
+            </dl>
+            <button id="modificar" type="button">Modificar reserva</button>
+        </section>
+    </main>
+    <script src="vendor/jquery-4.0.0.min.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="reserva.js"></script>
+</body>
+</html>
